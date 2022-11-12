@@ -89,16 +89,88 @@ echo $run("Farhan", "Nasim");
 
 /* ARRAY FUNCTION */
 
-$number = [1, 2, 3];
-$numberTwo = [4, 5, 6];
+/* array spread function (start)*/
 
-$new = array_merge($number, $numberTwo);
-print_r($new);
+$number = [1, 2, 3, 4, 5, 6];
+$numberTwo = [7, 8, 9];
 
-echo "Hello World";
+$newarray = [...$number, ...$numberTwo];
+//print_r($newarray);
+
+/* array spread function (End) */
+
+/* array combine function (start) */
+
+
+$info = ["Name", "Age", "Gender"];
+$ans = ["Farhan", 20, "Male"];
+
+$final =  array_combine($info, $ans);
+//print_r($final);
+//echo $final["Name"];
 
 
 
+
+/* array combine function (end) */
+
+/* get array keys function (start) */
+
+$hehe = [
+
+   'User' => "Farhan",
+   'Age' => 20,
+   'Male' => "Male",
+
+];
+
+//print_r(array_keys($hehe));
+
+
+/* get array keys function (end) */
+
+/* keys and value flip..here keys become values and values become keys (start) */
+
+
+$test = [
+    'ID' => 23678,
+    'Name' => "Farhan",
+    'Age' => 20,
+];
+   
+$flip = array_flip($test);
+
+//print_r($flip);
+
+
+
+/* keys and values flip (end) */
+
+
+/* array with range of numbers (start) */
+
+$list = range(1, 3);
+$winners = ["Farhan", "Dipto", "Nishan", ];
+//print_r($list);
+
+
+/* array with range of numbers (end) */
+
+/* array mapping (start) */
+
+ $map = array_map(
+
+   function($num, $people){
+      return "Numbers are :  ${num} ${people}";
+   }, $list, $winners);
+
+ //  print_r($map);
+
+   
+   
+
+
+/* array mapping  (end) */
 
 /* ARRAY FUNCTION (END) */
 
